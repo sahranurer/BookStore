@@ -1,15 +1,20 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using AutoMapper;
+using FluentValidation;
+using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
+using WebApi.BookOperations.CreateBook;
 using WebApi.BookOperations.DeleteBook;
 using WebApi.BookOperations.GetBookDetail;
 using WebApi.BookOperations.GetBooks;
+using WebApi.BookOperations.UpdateBook;
 using WebApi.DbOperations;
 using static WebApi.BookOperations.GetBookDetail.GetBookDetailQuery;
 using static WebApi.BookOperations.GetBooks.CreateBookCommand;
 using static WebApi.BookOperations.GetBooks.GetBooksQuery;
-using static WebApi.BookOperations.GetBooks.UpdateBookCommand;
+using static WebApi.BookOperations.UpdateBook.UpdateBookCommand;
 
 namespace WebApi.AddControllers
 {
@@ -19,16 +24,18 @@ namespace WebApi.AddControllers
     {
 
         private readonly BookStoreDbContext _context;
+        private readonly IMapper _mapper;
 
-        public BookController(BookStoreDbContext context)
+        public BookController(BookStoreDbContext context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
 
         [HttpGet]
         public IActionResult GetBooks()
         {
-            GetBooksQuery query = new GetBooksQuery(_context);
+            GetBooksQuery query = new GetBooksQuery(_context, _mapper);
             var result = query.Handle();
             return Ok(result);
         }
@@ -39,9 +46,12 @@ namespace WebApi.AddControllers
             BookDetailViewModel result;
             try
             {
-                GetBookDetailQuery query = new GetBookDetailQuery(_context);
-
+                GetBookDetailQuery query = new GetBookDetailQuery(_context, _mapper);
+                GetBookDetailQueryValidator validator = new GetBookDetailQueryValidator();
+                validator.ValidateAndThrow(query);
                 query.BookId = id;
+
+
                 result = query.Handle();
             }
             catch (Exception ex)
@@ -55,11 +65,28 @@ namespace WebApi.AddControllers
         [HttpPost]
         public IActionResult AddBook([FromBody] CreateBookModel newBook)
         {
-            CreateBookCommand command = new CreateBookCommand(_context);
+            CreateBookCommand command = new CreateBookCommand(_context, _mapper);
             try
             {
                 command.Model = newBook;
+
+                CreateBookCommandValidator validator = new CreateBookCommandValidator();
+                ValidationResult result = validator.Validate(command);
+                validator.ValidateAndThrow(command);
                 command.Handle();
+
+                // if (!result.IsValid)
+                // {
+                //     // foreach (var item in result.Errors)
+                //     // {
+                //     //     Console.WriteLine("Ozellik : " + item.PropertyName + "- Error Message : " + item.ErrorMessage);
+                //     // }
+                // }
+                // else
+                // {
+                //     command.Handle();
+                // }
+
 
             }
             catch (Exception ex)
@@ -80,6 +107,9 @@ namespace WebApi.AddControllers
             try
             {
                 UpdateBookCommand command = new UpdateBookCommand(_context);
+                UpdateBookCommandValidator validator = new UpdateBookCommandValidator();
+                ValidationResult result = validator.Validate(command);
+                validator.ValidateAndThrow(command);
                 command.BookId = id;
                 command.Model = updateBook;
                 command.Handle();
@@ -101,7 +131,11 @@ namespace WebApi.AddControllers
             try
             {
                 DeleteBookCommand command = new DeleteBookCommand(_context);
+                DeleteBookCommandValidator validator = new DeleteBookCommandValidator();
+
+                validator.ValidateAndThrow(command);
                 command.BookId = id;
+               
                 command.Handle();
             }
             catch (System.Exception ex)
