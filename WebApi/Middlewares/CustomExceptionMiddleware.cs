@@ -5,12 +5,15 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
+using WebApi.Services;
 
 namespace WebApi.Middlewares{
     public class CustomExceptionMiddleware{
         private readonly RequestDelegate _next;
-        public CustomExceptionMiddleware(RequestDelegate next){
+        private readonly ILoggerService  _loggerService;
+        public CustomExceptionMiddleware(RequestDelegate next,ILoggerService  loggerService){
              _next = next;
+             _loggerService = loggerService;
         }
          //gelen request ve responseları loglamak
          
@@ -20,11 +23,11 @@ namespace WebApi.Middlewares{
             {
                  //request
              string message = "[Request] Http " + context.Request.Method + context.Request.Path;
-             Console.WriteLine(message);
+             _loggerService.Write(message);
              await _next(context); //bekle ve bir sonraki middleware geç
               //response
               message = "[Response] HTTP " + context.Request.Method + context.Request.Path + " responded " + context.Response.StatusCode + " in " + watch.Elapsed;
-              Console.WriteLine(message);
+              _loggerService.Write(message);
             }
             catch (Exception ex)
             {
@@ -40,7 +43,7 @@ namespace WebApi.Middlewares{
             
             string message = "[Error] HTTP " + context.Request.Method + " - " 
             + context.Response.StatusCode + " Error Message " + ex.Message + " in " + watch.ElapsedMilliseconds + " ms";
-            System.Console.WriteLine(message);
+            _loggerService.Write(message);
 
             
 
