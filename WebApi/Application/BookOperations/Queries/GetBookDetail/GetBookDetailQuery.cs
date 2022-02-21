@@ -17,7 +17,7 @@ namespace WebApi.Application.BookOperations.Commands.GetBookDetail{
         }
        
        public BookDetailViewModel Handle(){
-            var book = _dbContext.Books.Include(x=>x.Genre).SingleOrDefault(x => x.Id == BookId);
+            var book = _dbContext.Books.Include(x=>x.Author).Include(x=>x.Genre).SingleOrDefault(x => x.Id == BookId);
             if (book is null)
             {
                  throw new InvalidOperationException("Kitap zaten yok");
@@ -31,6 +31,8 @@ namespace WebApi.Application.BookOperations.Commands.GetBookDetail{
        public class BookDetailViewModel{
            public string Title { get; set; }
            public string Genre { get; set; }
+
+             public string Author { get; set; }
            public int PageCount { get; set; }
            
            public string PublishDate { get; set; }
