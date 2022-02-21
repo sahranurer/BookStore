@@ -1,10 +1,11 @@
 using System;
 using System.Linq;
 using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using WebApi.Common;
 using WebApi.DbOperations;
 
-namespace WebApi.BookOperations.GetBookDetail{
+namespace WebApi.Application.BookOperations.Commands.GetBookDetail{
     public class GetBookDetailQuery{
         private readonly BookStoreDbContext _dbContext;
 
@@ -16,7 +17,7 @@ namespace WebApi.BookOperations.GetBookDetail{
         }
        
        public BookDetailViewModel Handle(){
-            var book = _dbContext.Books.SingleOrDefault(x => x.Id == BookId);
+            var book = _dbContext.Books.Include(x=>x.Genre).SingleOrDefault(x => x.Id == BookId);
             if (book is null)
             {
                  throw new InvalidOperationException("Kitap zaten yok");

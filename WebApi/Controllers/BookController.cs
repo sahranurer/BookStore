@@ -5,18 +5,17 @@ using AutoMapper;
 using FluentValidation;
 using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
-using WebApi.BookOperations.CreateBook;
-using WebApi.BookOperations.DeleteBook;
-using WebApi.BookOperations.GetBookDetail;
-using WebApi.BookOperations.GetBooks;
-using WebApi.BookOperations.UpdateBook;
+using WebApi.Application.BookOperations.Commands.DeleteBook;
+using WebApi.Application.BookOperations.Commands.GetBookDetail;
+using WebApi.Application.BookOperations.Commands.GetBooks;
+using WebApi.Application.BookOperations.Commands.UpdateBook;
+using WebApi.BookOperations.Commands.CreateBook;
 using WebApi.DbOperations;
-using static WebApi.BookOperations.GetBookDetail.GetBookDetailQuery;
-using static WebApi.BookOperations.GetBooks.CreateBookCommand;
-using static WebApi.BookOperations.GetBooks.GetBooksQuery;
-using static WebApi.BookOperations.UpdateBook.UpdateBookCommand;
+using static WebApi.Application.BookOperations.Commands.GetBookDetail.GetBookDetailQuery;
+using static WebApi.Application.BookOperations.Commands.GetBooks.CreateBookCommand;
+using static WebApi.Application.BookOperations.Commands.UpdateBook.UpdateBookCommand;
 
-namespace WebApi.AddControllers
+namespace WebApi.Controllers
 {
     [ApiController]
     [Route("[controller]s")]
