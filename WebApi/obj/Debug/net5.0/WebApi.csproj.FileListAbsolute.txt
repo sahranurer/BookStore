@@ -7,11 +7,15 @@ C:\Users\lenovo\Desktop\Pratikler\BookStoreProject\WebApi\bin\Debug\net5.0\WebAp
 C:\Users\lenovo\Desktop\Pratikler\BookStoreProject\WebApi\bin\Debug\net5.0\WebApi.dll
 C:\Users\lenovo\Desktop\Pratikler\BookStoreProject\WebApi\bin\Debug\net5.0\ref\WebApi.dll
 C:\Users\lenovo\Desktop\Pratikler\BookStoreProject\WebApi\bin\Debug\net5.0\WebApi.pdb
+C:\Users\lenovo\Desktop\Pratikler\BookStoreProject\WebApi\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\lenovo\Desktop\Pratikler\BookStoreProject\WebApi\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\lenovo\Desktop\Pratikler\BookStoreProject\WebApi\bin\Debug\net5.0\FluentValidation.dll
 C:\Users\lenovo\Desktop\Pratikler\BookStoreProject\WebApi\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\lenovo\Desktop\Pratikler\BookStoreProject\WebApi\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Users\lenovo\Desktop\Pratikler\BookStoreProject\WebApi\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.InMemory.dll
 C:\Users\lenovo\Desktop\Pratikler\BookStoreProject\WebApi\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\lenovo\Desktop\Pratikler\BookStoreProject\WebApi\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\lenovo\Desktop\Pratikler\BookStoreProject\WebApi\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Users\lenovo\Desktop\Pratikler\BookStoreProject\WebApi\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\lenovo\Desktop\Pratikler\BookStoreProject\WebApi\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\lenovo\Desktop\Pratikler\BookStoreProject\WebApi\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -31,7 +35,3 @@ C:\Users\lenovo\Desktop\Pratikler\BookStoreProject\WebApi\obj\Debug\net5.0\WebAp
 C:\Users\lenovo\Desktop\Pratikler\BookStoreProject\WebApi\obj\Debug\net5.0\ref\WebApi.dll
 C:\Users\lenovo\Desktop\Pratikler\BookStoreProject\WebApi\obj\Debug\net5.0\WebApi.pdb
 C:\Users\lenovo\Desktop\Pratikler\BookStoreProject\WebApi\obj\Debug\net5.0\WebApi.genruntimeconfig.cache
-C:\Users\lenovo\Desktop\Pratikler\BookStoreProject\WebApi\bin\Debug\net5.0\AutoMapper.dll
-C:\Users\lenovo\Desktop\Pratikler\BookStoreProject\WebApi\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
-C:\Users\lenovo\Desktop\Pratikler\BookStoreProject\WebApi\bin\Debug\net5.0\FluentValidation.dll
-C:\Users\lenovo\Desktop\Pratikler\BookStoreProject\WebApi\bin\Debug\net5.0\Newtonsoft.Json.dll

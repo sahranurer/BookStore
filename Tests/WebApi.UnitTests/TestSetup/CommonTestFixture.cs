@@ -9,7 +9,8 @@ namespace TestSetup
         public IMapper Mapper {get;set;}
         public CommonTestFixture(){
             var options = new DBContextOptionsBuild<BookStoreDbContext>().UseInMemoryDatabase(databaseName:"BookStoreTestDB").options;
-           
+            Context = new BookStoreDbContext(options);
+            Context.Database.EnsureCreated();
         }
     }
 }

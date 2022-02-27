@@ -35,6 +35,9 @@ namespace WebApi
             services.AddControllers();
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
             services.AddDbContext<BookStoreDbContext>(options => options.UseInMemoryDatabase(databaseName: "BookStoreDB"));
+            services.AddScoped<IBookStoreDbContext>(provider => provider.GetService<BookStoreDbContext>()); 
+            // Her Request'e istinaden response donene kadar context nesnesi uretip, response ile sonlandirir
+            // Yeni Request te tekrar bir context olusur
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebApi", Version = "v1" });
