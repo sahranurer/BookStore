@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\lenovo\\Desktop\\Pratikler\\BookStoreProject\\WebApi\\WebApi.csproj": {}
+    "C:\\Users\\lenovo\\Desktop\\Pratikler\\BookStoreProject\\WebApi\\WebApi.csproj": {}
   },
   "projects": {
-    "c:\\Users\\lenovo\\Desktop\\Pratikler\\BookStoreProject\\WebApi\\WebApi.csproj": {
+    "C:\\Users\\lenovo\\Desktop\\Pratikler\\BookStoreProject\\WebApi\\WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\lenovo\\Desktop\\Pratikler\\BookStoreProject\\WebApi\\WebApi.csproj",
+        "projectUniqueName": "C:\\Users\\lenovo\\Desktop\\Pratikler\\BookStoreProject\\WebApi\\WebApi.csproj",
         "projectName": "WebApi",
-        "projectPath": "c:\\Users\\lenovo\\Desktop\\Pratikler\\BookStoreProject\\WebApi\\WebApi.csproj",
+        "projectPath": "C:\\Users\\lenovo\\Desktop\\Pratikler\\BookStoreProject\\WebApi\\WebApi.csproj",
         "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\lenovo\\Desktop\\Pratikler\\BookStoreProject\\WebApi\\obj\\",
+        "outputPath": "C:\\Users\\lenovo\\Desktop\\Pratikler\\BookStoreProject\\WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

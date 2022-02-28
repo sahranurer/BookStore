@@ -122,3 +122,4 @@ C:\Users\lenovo\Desktop\Pratikler\BookStoreProject\Tests\WebApi.UnitTests\obj\De
 C:\Users\lenovo\Desktop\Pratikler\BookStoreProject\Tests\WebApi.UnitTests\obj\Debug\net6.0\ref\WebApi.UnitTests.dll
 C:\Users\lenovo\Desktop\Pratikler\BookStoreProject\Tests\WebApi.UnitTests\obj\Debug\net6.0\WebApi.UnitTests.pdb
 C:\Users\lenovo\Desktop\Pratikler\BookStoreProject\Tests\WebApi.UnitTests\obj\Debug\net6.0\WebApi.UnitTests.genruntimeconfig.cache
+c:\Users\lenovo\Desktop\Pratikler\BookStoreProject\Tests\WebApi.UnitTests\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll

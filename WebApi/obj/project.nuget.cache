@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "s5kHeGZleAGTu7grSYgplkKVPBYIKKMXmsMWYvX40RnElyjMsn3kxeW6vOnwpQ1SPpaOlN409Lsexlyztv1CEA==",
+  "dgSpecHash": "yei5P00OoB3JYCMf2tf446rfv/bghDhMoqq0KP4/kcTYjIrR3FsocNO/3cxHMGeKEiDUsQuRDjLYKzO+2uoefQ==",
   "success": true,
-  "projectFilePath": "c:\\Users\\lenovo\\Desktop\\Pratikler\\BookStoreProject\\WebApi\\WebApi.csproj",
+  "projectFilePath": "C:\\Users\\lenovo\\Desktop\\Pratikler\\BookStoreProject\\WebApi\\WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lenovo\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\lenovo\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",

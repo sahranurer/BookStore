@@ -1,13 +1,16 @@
 using System;
 using System.Linq;
+using AutoMapper;
 using WebApi.DbOperations;
 
 namespace WebApi.Application.BookOperations.Commands.DeleteBook{
     public class DeleteBookCommand{
         private readonly IBookStoreDbContext _dbContext;
+        private readonly IMapper _mapper;
         public int BookId { get; set; }
-        public DeleteBookCommand(IBookStoreDbContext dbContext){
+        public DeleteBookCommand(IBookStoreDbContext dbContext,IMapper mapper){
               _dbContext = dbContext;
+              _mapper = mapper;
         }
 
         public void Handle(){

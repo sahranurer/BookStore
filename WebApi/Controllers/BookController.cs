@@ -83,7 +83,7 @@ namespace WebApi.Controllers
         {
 
             
-                UpdateBookCommand command = new UpdateBookCommand(_context);
+                UpdateBookCommand command = new UpdateBookCommand(_context,_mapper);
                 UpdateBookCommandValidator validator = new UpdateBookCommandValidator();
                 ValidationResult result = validator.Validate(command);
                 validator.ValidateAndThrow(command);
@@ -101,7 +101,7 @@ namespace WebApi.Controllers
         public IActionResult DeleteBook(int id)
         {
            
-                DeleteBookCommand command = new DeleteBookCommand(_context);
+                DeleteBookCommand command = new DeleteBookCommand(_context,_mapper);
                 DeleteBookCommandValidator validator = new DeleteBookCommandValidator();
 
                 validator.ValidateAndThrow(command);
